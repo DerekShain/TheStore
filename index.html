@@ -8,7 +8,7 @@
   <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <title>TheStore</title>
@@ -19,16 +19,33 @@
     <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
       <a class="navbar-brand ms-3" href="#">
         <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2">TheStore</span>
+          loading="lazy" onclick="location.reload()">
+        <span class="ms-2">The Mortar Mug Shop</span>
       </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <li class="nav-item nav-link selectable" onclick="app.itemsController.showItem()">Sell Your Mug</li>
+          <!-- <li class="nav-item nav-link selectable" onclick="app.itemsController.buyItem()">Buy Mugs</li> -->
+        </div>
+      </div>
     </nav>
   </header>
   <main>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
+        <div class="col">
+         <div class="storefront" id="items"></div>
+              <div class="text-center" id="controls">
+                <h1 class="selectable" onclick="app.itemsController.buyItem()">Buy Handcrafted Mugs Here!</h1>
+              </div>
+              <div class="" id="forms">
+                <img src="https://cdn.shopify.com/s/files/1/2457/5727/files/IMG_2048_2000x.JPG?v=1518142384" class="image-cover" alt="">
+              </div>
+            <div class="row justify-content-between m-3" id="mugs"></div>
+            <div class="" id="carts"></div>
         </div>
       </div>
     </div>
